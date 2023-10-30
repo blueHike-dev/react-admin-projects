@@ -7,8 +7,11 @@
     margin-bottom: 20px;
 
     button {
-      padding: 5px;
-      cursor: pointer;
+      padding: 6px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        font-weight: 500;
     }
   }
 }
