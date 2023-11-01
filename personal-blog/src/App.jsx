@@ -42,14 +42,6 @@ function App() {
           element: <Blog />,
         },
         {
-          path: "/products",
-          element: <Products />,
-        },
-        {
-          path: "/products/:id",
-          element: <Product />,
-        },
-        {
           path: "/category",
           element: <Category />,
         },
