@@ -8,14 +8,18 @@ import Videos from "./pages/videos/Videos";
 import Category from "./pages/category/Category";
 import Blogs from "./pages/blogs/Blogs";
 import About from "./pages/about/About";
+import "./variables.scss";
+import { useContext } from "react";
+import { DarkModeContext } from "./context/darkModeContext";
 
 function App() {
+  const { darkMode } = useContext(DarkModeContext);
   const Layout = () => {
     return (
       <>
-        <div className="main">
+        <div className={`theme-${darkMode ? "dark" : "light"}`}>
           <Navbar />
-          <div className="mainContent">
+          <div>
             <Outlet />
           </div>
           <Footer />

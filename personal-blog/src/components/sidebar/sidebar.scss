@@ -1,0 +1,30 @@
+@import '../../variables.scss';
+
+
+.modal-wrapper {
+  @include themify($themes) {
+width: 100%;
+  height: calc(100vh - 70px);
+  position: absolute;
+  top: 70px;
+  left: 0;
+    background-color:themed('bgSoft');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  .modal {
+    padding: 50px;
+      border-radius: 10px;
+      background-color:themed('bg') ;
+      position: relative;
+
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+  }
+  }
+}
