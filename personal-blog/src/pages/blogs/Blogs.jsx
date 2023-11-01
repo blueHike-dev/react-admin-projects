@@ -2,7 +2,7 @@ import "./blogs.scss";
 import React from "react";
 
 const Blogs = () => {
-  return <div>Blogs</div>;
+  return <div className="blogs">blogs</div>;
 };
 
 export default Blogs;

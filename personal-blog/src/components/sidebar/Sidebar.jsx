@@ -1,12 +1,12 @@
 import "./sidebar.scss";
 
-const Sidebar = ({ props }) => {
+const Sidebar = () => {
   return (
     <div className="modal-wrapper">
       <div className="modal">
-        <span className="close" onClick={() => props.setOpen(false)}>
+        {/* <span className="close" onClick={() => props.setOpen(false)}>
           X
-        </span>
+        </span> */}
       </div>
     </div>
   );

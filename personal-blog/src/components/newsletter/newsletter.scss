@@ -1,0 +1,8 @@
+@import "../../variables.scss";
+
+.main {
+  @include themify($themes) {
+    background-color: themed('bg');
+    color: themed('textColor');
+    padding: 5px 20px;
+  }}

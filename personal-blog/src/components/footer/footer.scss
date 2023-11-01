@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.footer {
+  @include themify($themes) {
+    padding: 10px;
+    color: themed('textColor');
+    background-color: themed('bgSoft');
+  }
+}

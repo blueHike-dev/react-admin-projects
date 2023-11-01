@@ -1,0 +1,10 @@
+@import '../../variables.scss';
+
+.videos {
+  @include themify($themes) {
+    margin-top: 60px;
+    padding: 10px 20px;
+    background-color: themed('bgSoft');
+    color: themed('textColor');
+  }
+}
