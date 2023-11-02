@@ -21,7 +21,7 @@
       align-items: center;
 
       .toggle {
-        // visibility: hidden;
+        visibility: hidden;
 
         
         @include mobile {
@@ -39,8 +39,22 @@
             font-weight: 400;
             font-size: 25px;
           }
+        }}
+
+        a {
+
+          text-decoration: none;
+            color: themed('textColor');
+            padding: 8px 40px;
+            font-size: 28px;
+            font-weight: 700;
+
+          @include mobile {
+              display: none;
+
+            }
         }
-      }
+      
     }
 
     .middle {
@@ -58,6 +72,11 @@
             background-color: themed('bgSoft');
             border-radius: 5px;
           }
+
+                        @include mobile {
+                          display: none;
+            
+                        }
         }
     }
 
