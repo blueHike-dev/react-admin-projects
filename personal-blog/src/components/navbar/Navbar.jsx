@@ -8,10 +8,17 @@ import {
   BsFilterLeft,
 } from "react-icons/bs";
 import Sidebar from "../sidebar/Sidebar";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { mode, darkMode } = useContext(DarkModeContext);
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleClick = (path) => {
+    setOpen(false);
+    navigate(path);
+  };
 
   const openSidebar = () => {
     setOpen(!open);
@@ -33,17 +40,17 @@ const Navbar = () => {
           </div>
           {open && (
             <div className="sidebar">
-              <Sidebar />
+              <Sidebar handleClick={handleClick} />
             </div>
           )}
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" className="logo">
             blueHike
           </Link>
         </div>
         <div className="middle">
+          <Link to="/projects">Projects</Link>
           <Link to="/blogs">Blogs</Link>
           <Link to="/videos">Videos</Link>
-          <Link to="/category">Categories</Link>
         </div>
         <div className="right">
           {darkMode ? (
