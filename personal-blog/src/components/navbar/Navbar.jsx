@@ -54,17 +54,17 @@ const Navbar = () => {
           <Link to="/videos">Videos</Link>
         </div>
         <div className="right">
-          <div className="icon">
-            <a href="">
-              <BsGithub />
-            </a>
-          </div>
           <div className="toggleMode">
             {darkMode ? (
               <BsFillBrightnessHighFill onClick={mode} />
             ) : (
               <BsFillMoonFill onClick={mode} />
             )}
+          </div>
+          <div className="icon">
+            <a href="https://github.com/simo6lues">
+              <BsGithub />
+            </a>
           </div>
           <Link to="/about">
             <span>
