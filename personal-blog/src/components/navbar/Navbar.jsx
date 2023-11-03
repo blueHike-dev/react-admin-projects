@@ -6,6 +6,7 @@ import {
   BsFillBrightnessHighFill,
   BsFillMoonFill,
   BsFilterLeft,
+  BsGithub,
 } from "react-icons/bs";
 import Sidebar from "../sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
@@ -53,12 +54,18 @@ const Navbar = () => {
           <Link to="/videos">Videos</Link>
         </div>
         <div className="right">
-          {darkMode ? (
-            <BsFillBrightnessHighFill onClick={mode} />
-          ) : (
-            <BsFillMoonFill onClick={mode} />
-          )}
-
+          <div className="icon">
+            <a href="">
+              <BsGithub />
+            </a>
+          </div>
+          <div className="toggleMode">
+            {darkMode ? (
+              <BsFillBrightnessHighFill onClick={mode} />
+            ) : (
+              <BsFillMoonFill onClick={mode} />
+            )}
+          </div>
           <Link to="/about">
             <span>
               <img src="simo.jpg" alt="simo" />
