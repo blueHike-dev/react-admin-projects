@@ -1,0 +1,51 @@
+@import '../../variables.scss';
+
+.container {
+  @include themify($themes) {
+    margin: auto;
+    
+    .profile-wrapper{
+      width: 350px;
+      height: 400px;
+      position: relative;
+      padding: 50px;
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        width: 300px;
+        height: 350px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        transition: 0.3s;        
+
+        .profile-image {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          padding: 50px;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          background-color: themed('bg');
+
+
+          .profile-image img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+
+            &:hover {
+              opacity: 0.4;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }}
