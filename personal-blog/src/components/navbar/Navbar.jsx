@@ -3,7 +3,7 @@ import { DarkModeContext } from "../../context/darkModeContext";
 import "./navbar.scss";
 import React, { useContext, useState } from "react";
 import {
-  BsArrowsCollapse,
+  BsX,
   BsFillBrightnessHighFill,
   BsFillMoonFill,
   BsFilterLeft,
@@ -33,7 +33,7 @@ const Navbar = () => {
             <button onClick={openSidebar}>
               {open ? (
                 <div className="close-icon">
-                  <BsArrowsCollapse />
+                  <BsX />
                 </div>
               ) : (
                 <div className="menu-icon">
