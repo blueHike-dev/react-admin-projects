@@ -39,14 +39,26 @@ $themes: (
   @return map-get($theme-map, $key);
 }
 
+      // RESPOSIVENESS
+
+
+// Mobile
 @mixin mobile {
-  @media (max-width: 580px) {
+  @media (max-width: 480px) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (max-width: 960px) {
-    @content;
+//Extra small devices
+@mixin small-devices {
+  @media (min-width: 768px) and (max-width: 757px) {
+    @content
   }
+}
+
+
+@mixin Extra-large-screen {
+   @media (min-width: 1920px) {
+    @content
+   }
 }

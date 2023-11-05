@@ -1,4 +1,4 @@
-import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import "./slider.scss";
 
 const Slider = () => {
@@ -12,17 +12,22 @@ const Slider = () => {
           <ul className="social-icons">
             <li>
               <a href="#instagram" title="instagram">
-                <BsInstagram />
+                <BsInstagram className="icon" />
               </a>
             </li>
             <li>
               <a href="#twitter" title="twitter">
-                <BsTwitter />
+                <BsTwitter className="icon" />
               </a>
             </li>
             <li>
               <a href="#linkedin" title="linkedin">
-                <BsLinkedin />
+                <BsLinkedin className="icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#youtube" title="youtube">
+                <BsYoutube className="icon" />
               </a>
             </li>
           </ul>
