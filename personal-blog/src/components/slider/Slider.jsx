@@ -35,7 +35,7 @@ const Slider = () => {
             <h2>blueHike</h2>
             <div className="profile-bio">
               I'm a javascript full-stack developer, and I enjoy working with
-              <em>ReactJs</em> and <em>NodeJs</em>
+              <em> React</em> and <em>NodeJs</em>
             </div>
           </div>
         </div>
