@@ -12,22 +12,22 @@ const Slider = () => {
           <ul className="social-icons">
             <li>
               <a href="#instagram" title="instagram">
-                <BsInstagram className="icon" />
+                <BsInstagram className="instagram" />
               </a>
             </li>
             <li>
               <a href="#twitter" title="twitter">
-                <BsTwitter className="icon" />
+                <BsTwitter className="twitter" />
               </a>
             </li>
             <li>
               <a href="#linkedin" title="linkedin">
-                <BsLinkedin className="icon" />
+                <BsLinkedin className="linkedin" />
               </a>
             </li>
             <li>
               <a href="#youtube" title="youtube">
-                <BsYoutube className="icon" />
+                <BsYoutube className="youtube" />
               </a>
             </li>
           </ul>
