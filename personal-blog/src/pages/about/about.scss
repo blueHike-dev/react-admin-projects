@@ -4,7 +4,7 @@
   @include themify($themes) {
     margin-top: 60px;
     padding: 10px 20px;
-    background-color: themed('bgSoft');
+    background-color: themed('bg');
     color: themed('textColor');
   }
 }
