@@ -34,7 +34,6 @@ const Slider = () => {
               </li>
             </ul>
             <div className="profile-name">
-              <h2>blueHike</h2>
               <div className="profile-bio">
                 I'm a javascript full-stack developer, and I enjoy working with
                 <em> React</em> and <em>NodeJs</em>
