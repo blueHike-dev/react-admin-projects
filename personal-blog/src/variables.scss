@@ -15,6 +15,11 @@ $themes: (
   ),
 );
 
+.gradient{
+  /* global 92%+ browsers support */
+  background: radial-gradient(ellipse at 52% 50%, rgba(23, 33, 167, 1) 0%, rgba(40, 81, 130, 1) 50%, rgba(76, 46, 167, 1) 100%);
+}
+
 @mixin themify($themes) {
   @each $theme, $map in $themes {
     .theme-#{$theme} & {

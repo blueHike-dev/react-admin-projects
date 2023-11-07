@@ -4,7 +4,10 @@ import "./slider.scss";
 const Slider = () => {
   return (
     <div className="container">
-      <div className="profile-words">hellp world</div>
+      <div className="profile-words">
+        <span className="words-title">bluehike</span>
+        <span className="words-paragh">A Passionate Software Developer</span>
+      </div>
       <div className="profile-image">
         <div className="profile-wrapper">
           <div className="profile">
