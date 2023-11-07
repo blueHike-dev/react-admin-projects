@@ -5,8 +5,11 @@ const Slider = () => {
   return (
     <div className="container">
       <div className="profile-words">
-        <span className="words-title">bluehike</span>
-        <span className="words-paragh">A Passionate Software Developer</span>
+        <div className="header">blueHike</div>
+        <div className="role">A Passionate Sofware developer</div>
+        <div className="duty">
+          My purpose has always to been make the world around me a better place.
+        </div>
       </div>
       <div className="profile-image">
         <div className="profile-wrapper">

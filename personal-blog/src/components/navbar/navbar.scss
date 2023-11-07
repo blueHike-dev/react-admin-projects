@@ -12,8 +12,9 @@
     width: 100%;
     top: 0;
     background-color: themed('bg');
-    color: themed('textColor');
     z-index: 999;
+        font-family: 'Lato', sans-serif;
+        color: themed('textColor');
     
 
     .left {
@@ -82,11 +83,12 @@
 
       a {
           text-decoration: none;
-          color: themed('textColor');
+          color: themed('textColorSoft');
           padding: 8px 40px;
       
           &:hover {
             background-color: themed('bgSoft');
+            
             border-radius: 25px;
           }
 

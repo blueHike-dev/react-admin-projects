@@ -4,13 +4,37 @@
   @include themify($themes) {
     margin: auto;
     display: flex;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 
     .profile-words {
       flex: 1;
-      color: themed('textColor');
+      padding: 100px 50px;
+      .header {
+        font-size: 55px;
+        margin-bottom: 10px;
+        font-weight:700 ;
+          // font-size: 72px;
+            background: -webkit-linear-gradient(#cccccc, #1284ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+      }
 
-      
+      .role {
+        color: themed('textColor');
+        font-size: 60px;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 10px;
+      }
+
+      .duty {
+        color: themed('textColorSoft');
+        font-size: 28px;
+        font-family: 'Urbanist', sans-serif;
+      }
+
+
     }
 
     .profile-image {
@@ -20,15 +44,20 @@
       align-items: center;
       width: 350px;
       height: 450px;
-      border-radius: 50%;  
-      background: radial-gradient(ellipse at 50% 50%, rgba(0, 255, 235, 1) 0%, rgba(7, 58, 187, 1) 100%);
+      // border-radius: 50%;  
+      // background: radial-gradient(ellipse at 50% 50%, rgba(0, 255, 235, 1) 0%, rgba(7, 58, 187, 1) 100%);
       position: relative;
       padding: 50px;
       // background: red;
-
-    
-        
-        .profile {
+      .profile-wrapper {
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 13px 54px #1284ee;
+              -moz-box-shadow: 0px 0px 53px 54px #1284ee;
+              box-shadow: 0px 0px 53px 54px #2badee;
+              background: linear-gradient(90deg, rgb(0, 119, 255, 1) 30%, rgba(0, 121, 255, 1) 82%);
+            
+            
+      .profile {
         // background-color: white;
         // background: themed('bg');
         display: flex;
@@ -182,4 +211,4 @@
         }
       }
     }
-  }}}
+  }}}}
