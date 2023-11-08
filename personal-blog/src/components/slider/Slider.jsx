@@ -8,7 +8,8 @@ const Slider = () => {
         <div className="header">blueHike</div>
         <div className="role">A Passionate Sofware developer</div>
         <div className="duty">
-          My purpose has always to been make the world around me a better place.
+          My purpose has always to been to make the world around me a better
+          place.
         </div>
       </div>
       <div className="profile-image">
@@ -41,7 +42,7 @@ const Slider = () => {
             </ul>
             <div className="profile-name">
               <div className="profile-bio">
-                I'm a javascript full-stack developer, and I enjoy working with
+                I'm a javascript full-stack developer, and I Love working with
                 <em> React</em> and <em>NodeJs</em>
               </div>
             </div>
