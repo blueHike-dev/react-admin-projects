@@ -1,10 +1,12 @@
 @import '../../variables.scss';
 
-.blogs {
+.blogs-page {
   @include themify($themes) {
     margin-top: 60px;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: themed('bg');
     color: themed('textColor');
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
   }
 }
