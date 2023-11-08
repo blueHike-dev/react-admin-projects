@@ -7,13 +7,16 @@
     background-color: themed('bg');
     color: themed('textColor');
     font-family: 'Lato', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 
     .introduction {
       background: themed('bgSoft');
-      padding: 20px 20px;
+      padding: 15px 20px;
       top: 10px;
       border-radius: 5px;
+      max-width: 60vw;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
