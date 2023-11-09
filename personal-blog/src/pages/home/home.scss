@@ -3,7 +3,7 @@
 .home {
   @include themify($themes) {
     margin-top: 60px;
-    padding: 10px 20px;
+    // padding: 10px 20px;
     background-color: themed('bg');
   }
 }

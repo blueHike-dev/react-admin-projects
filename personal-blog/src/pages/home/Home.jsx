@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="home">
       <Slider />
-      <Newsletter />
+      <Newsletter style={{ width: "100%" }} />
     </div>
   );
 };
