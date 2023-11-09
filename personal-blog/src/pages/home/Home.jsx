@@ -7,7 +7,10 @@ const Home = () => {
   return (
     <div className="home">
       <Slider />
-      <Newsletter style={{ width: "100%" }} />
+      <div className="border">
+        <Newsletter />
+      </div>
+      hello
     </div>
   );
 };

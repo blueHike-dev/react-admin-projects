@@ -5,5 +5,9 @@
     margin-top: 60px;
     // padding: 10px 20px;
     background-color: themed('bg');
+
+    .border {
+      border-bottom: 1px solid themed('border');
+    }
   }
 }
