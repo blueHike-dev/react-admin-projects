@@ -1,5 +1,6 @@
 import { BsInstagram, BsLinkedin, BsTwitter, BsYoutube } from "react-icons/bs";
 import "./slider.scss";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
@@ -10,6 +11,12 @@ const Slider = () => {
         <div className="duty">
           My purpose has always to been to make the world around me a better
           place.
+        </div>
+        <div className="buttons">
+          <button className="previos">Prev Work</button>
+          <Link to="/about">
+            <button className="current">My Profile</button>
+          </Link>
         </div>
       </div>
       <div className="profile-image">
