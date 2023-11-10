@@ -19,7 +19,12 @@ const Blogs = () => {
       <div className="introduction">
         <ReadMore text={introWords} maxLength={321} />
       </div>
-      <div className="posts"></div>
+      <div className="posts">
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+      </div>
     </div>
   );
 };
