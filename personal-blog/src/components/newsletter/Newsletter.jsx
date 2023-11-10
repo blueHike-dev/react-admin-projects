@@ -1,5 +1,6 @@
 import "./newsletter.scss";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Newsletter = () => {
   return (
@@ -18,8 +19,13 @@ const Newsletter = () => {
           <div className="samples">
             <img src="computer.jpg" alt="" />
             <div className="headline">
-              <h3>blog post</h3>
-              <p className="author">blueHike</p>
+              <h3>Sample project</h3>
+              <p>
+                developed by
+                <Link to="/about">
+                  <span> blueHike</span>
+                </Link>
+              </p>
             </div>
             <div className="like">
               <button>view</button>
@@ -29,8 +35,13 @@ const Newsletter = () => {
           <div className="samples">
             <img src="computer.jpg" alt="" />
             <div className="headline">
-              <h3>blog post</h3>
-              <p className="author">blueHike</p>
+              <h3>Blog posts</h3>
+              <p className="author">
+                written by{" "}
+                <Link to="/about">
+                  <span> blueHike</span>
+                </Link>
+              </p>
             </div>
             <div className="like">
               <button>view</button>
@@ -40,8 +51,13 @@ const Newsletter = () => {
           <div className="samples">
             <img src="computer.jpg" alt="" />
             <div className="headline">
-              <h3>blog post</h3>
-              <p className="author">blueHike</p>
+              <h3>Videos posts</h3>
+              <p className="author">
+                published by{" "}
+                <Link to="/about">
+                  <span> blueHike</span>
+                </Link>
+              </p>
             </div>
             <div className="like">
               <button>view</button>
