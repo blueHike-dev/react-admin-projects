@@ -21,7 +21,7 @@
       margin-right: auto;
       margin-top: 20px;
       margin-bottom: 20px;
-      
+
 
       h1 {
         font-size: 70px;
@@ -35,18 +35,18 @@
     }
 
     .cards {
-     display: flex;
-     overflow: hidden;
-     padding: 50px;
-     gap: 30px;
-     
-     .card-intro {
-       flex: 1;
-       background: themed('border');
-       border-radius: 20px;
-       padding: 50px;
-     }
-     
+      display: flex;
+      overflow: hidden;
+      padding: 50px;
+      gap: 30px;
+
+      .card-intro {
+        flex: 1;
+        background: themed('border');
+        border-radius: 20px;
+        padding: 50px;
+      }
+
 
       .projects {
         flex: 1.5;
@@ -85,25 +85,26 @@
               font-size: 20px;
               margin-bottom: -20px;
               font-family: 'Roboto';
-              
+
             }
 
             p {
               font-size: 15px;
               font-weight: 600;
-            font-family: 'Lato';
+              font-family: 'Lato';
               color: rgb(83, 83, 82);
 
-             a  {
-              font-family: 'Roboto';
-              color: rgb(5, 178, 231);
+              a {
+                font-family: 'Roboto';
+                font-weight: 700;
+                color: rgb(5, 178, 231);
 
-              &:hover {
-                color: rgb(10, 145, 199);
+                &:hover {
+                  color: rgb(10, 145, 199);
+                }
               }
-             }
             }
-          } 
+          }
 
           .like {
             flex: 1;
@@ -111,10 +112,43 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+
+            button {
+                background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%);
+                margin: 10px;
+                padding: 5px 20px;
+                font-size: 15px;
+                text-align: center;
+                text-transform: capitalize;
+                transition: 0.9s;
+                background-size: 200% auto;
+                color: white;
+                box-shadow: 0 0 20px #eee;
+                border-radius: 5px;
+                font-family: 'Roboto';
+                display: block;
+                cursor: pointer;
+                border: none;
+            
+                &:hover {
+                  background-position: right center;
+                  color: #fff;
+                  text-decoration: none;
+                }
+              }
           }
+
+          .icon {
+            button {
+              background: white;
+              border:  none;
+              font-size: 20px;
+            }
+          }
+
         }
-        
       }
     }
   }
+
 }

@@ -1,10 +1,16 @@
 import "./newsletter.scss";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 
 const Newsletter = () => {
+  const [isLiked, setIsLiked] = useState(false);
+
+  const handleLikeClick = () => {
+    setIsLiked(!isLiked);
+  };
   return (
     <div className="main">
       <div className="intro">
@@ -31,7 +37,14 @@ const Newsletter = () => {
             </div>
             <div className="like">
               <button>view</button>
-              <div className="icon">like icon</div>
+              <div className="icon">
+                <button onClick={handleLikeClick}>
+                  <FontAwesomeIcon
+                    icon={isLiked ? solidHeart : regularHeart}
+                    style={{ color: isLiked ? "red" : "black" }}
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div className="samples">
@@ -47,7 +60,15 @@ const Newsletter = () => {
             </div>
             <div className="like">
               <button>view</button>
-              <div className="icon">like icon</div>
+              <div className="icon">
+                {" "}
+                <button onClick={handleLikeClick}>
+                  <FontAwesomeIcon
+                    icon={isLiked ? solidHeart : regularHeart}
+                    style={{ color: isLiked ? "red" : "black" }}
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div className="samples">
@@ -63,7 +84,15 @@ const Newsletter = () => {
             </div>
             <div className="like">
               <button>view</button>
-              <div className="icon">like icon</div>
+              <div className="icon">
+                {" "}
+                <button onClick={handleLikeClick}>
+                  <FontAwesomeIcon
+                    icon={isLiked ? solidHeart : regularHeart}
+                    style={{ color: isLiked ? "red" : "black" }}
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
