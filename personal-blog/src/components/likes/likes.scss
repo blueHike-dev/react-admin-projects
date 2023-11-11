@@ -1,0 +1,24 @@
+.likes {
+  button {
+    background: white;
+      border: none;
+      font-size: 25px;
+      outline: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      button .liked {
+        background: red;
+
+        &:hover {
+          background-color: red;
+        }
+
+        @keyframes splash {
+          0% {transform: scale(1);}
+          50% {transform: scale(1.2);}
+          100% {transform: scale(1);}
+        }
+      }
+  }
+}

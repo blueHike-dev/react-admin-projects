@@ -1,16 +1,10 @@
 import "./newsletter.scss";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
-import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
+
+import Likes from "../likes/Likes";
 
 const Newsletter = () => {
-  const [isLiked, setIsLiked] = useState(false);
-
-  const handleLikeClick = () => {
-    setIsLiked(!isLiked);
-  };
   return (
     <div className="main">
       <div className="intro">
@@ -21,7 +15,12 @@ const Newsletter = () => {
         </p>
       </div>
       <div className="cards">
-        <div className="card-intro">these are some of the samples</div>
+        <div className="card-intro">
+          <h1>Quality Projects over Quantity</h1>
+          <p>
+            Developing greate things to make the world around us a better place.
+          </p>
+        </div>
         <div className="projects">
           <h3>hello</h3>
           <div className="samples">
@@ -36,14 +35,11 @@ const Newsletter = () => {
               </p>
             </div>
             <div className="like">
-              <button>view</button>
+              <Link to="projects">
+                <button className="view">view</button>
+              </Link>
               <div className="icon">
-                <button onClick={handleLikeClick}>
-                  <FontAwesomeIcon
-                    icon={isLiked ? solidHeart : regularHeart}
-                    style={{ color: isLiked ? "red" : "black" }}
-                  />
-                </button>
+                <Likes />
               </div>
             </div>
           </div>
@@ -59,15 +55,11 @@ const Newsletter = () => {
               </p>
             </div>
             <div className="like">
-              <button>view</button>
+              <Link to="blogs">
+                <button className="view">view</button>
+              </Link>
               <div className="icon">
-                {" "}
-                <button onClick={handleLikeClick}>
-                  <FontAwesomeIcon
-                    icon={isLiked ? solidHeart : regularHeart}
-                    style={{ color: isLiked ? "red" : "black" }}
-                  />
-                </button>
+                <Likes />
               </div>
             </div>
           </div>
@@ -83,15 +75,11 @@ const Newsletter = () => {
               </p>
             </div>
             <div className="like">
-              <button>view</button>
+              <Link to="videos">
+                <button className="view">view</button>
+              </Link>
               <div className="icon">
-                {" "}
-                <button onClick={handleLikeClick}>
-                  <FontAwesomeIcon
-                    icon={isLiked ? solidHeart : regularHeart}
-                    style={{ color: isLiked ? "red" : "black" }}
-                  />
-                </button>
+                <Likes />
               </div>
             </div>
           </div>
