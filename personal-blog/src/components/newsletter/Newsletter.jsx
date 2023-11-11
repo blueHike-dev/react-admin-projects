@@ -10,15 +10,16 @@ const Newsletter = () => {
       <div className="intro">
         <h1>Let's develop and Build together</h1>
         <p>
-          My Commmitment and Passion is belevied to be crucial in the creativity
+          My Commmitment and Passion is belived to be crucial in the creativity
           of developing great projects
         </p>
       </div>
       <div className="cards">
         <div className="card-intro">
-          <h1>Quality Projects over Quantity</h1>
+          <h1>Developing Quality Projects over Quantity</h1>
           <p>
-            Developing greate things to make the world around us a better place.
+            Even though I believe in Quality over Quantity, I put more time and
+            effort to develop more Quality projects.
           </p>
         </div>
         <div className="projects">
