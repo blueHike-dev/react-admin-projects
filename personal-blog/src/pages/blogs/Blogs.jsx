@@ -1,3 +1,4 @@
+import Likes from "../../components/likes/Likes";
 import ReadMore from "../../components/readMore/ReadMore";
 import "./blogs.scss";
 import React from "react";
@@ -19,18 +20,26 @@ const Blogs = () => {
       <div className="introduction">
         <ReadMore text={introWords} maxLength={321} />
       </div>
+      <div className="search">
+        <input type="text" />
+      </div>
       <div className="posts">
         <div className="card">
           <img src="book.jpg" alt="" />
-          <h1>Hello</h1>
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+            cupiditate!
+          </h1>
           <div className="page-section">
             <div className="left">
-              <img src="" alt="" />
-              <h2></h2>
-              <h3></h3>
+              <img src="simo.jpg" alt="" />
+              <h2>blueHike</h2>
+              <h3>21h</h3>
             </div>
             <div className="right">
-              <div className="icons"></div>
+              <div className="icons">
+                <Likes style={{ background: "transparent" }} />
+              </div>
             </div>
           </div>
         </div>
