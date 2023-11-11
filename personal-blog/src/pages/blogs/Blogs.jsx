@@ -20,7 +20,20 @@ const Blogs = () => {
         <ReadMore text={introWords} maxLength={321} />
       </div>
       <div className="posts">
-        <div>hello</div>
+        <div className="card">
+          <img src="book.jpg" alt="" />
+          <h1>Hello</h1>
+          <div className="page-section">
+            <div className="left">
+              <img src="" alt="" />
+              <h2></h2>
+              <h3></h3>
+            </div>
+            <div className="right">
+              <div className="icons"></div>
+            </div>
+          </div>
+        </div>
         <div>hello</div>
         <div>hello</div>
         <div>hello</div>
