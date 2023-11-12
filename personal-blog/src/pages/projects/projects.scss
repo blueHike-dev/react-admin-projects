@@ -6,5 +6,61 @@
     padding: 10px 20px;
     background-color: themed('bg');
     color: themed('textColor');
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    .card {
+      border-radius: 8px;
+        background: themed('bgSoft');
+        max-height: auto;
+        max-width: auto;
+        padding: 10px;
+        margin-top: 30px;
+        transition: transform 0.1s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background: themed('border');
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+        }
+
+        h2 {
+          font-family: 'Roboto', sans-serif;
+          font-size: 25px;
+        }
+
+        .desc {
+          font-size: 18px;
+          font-family: 'Roboto';
+        }
+
+        .project  {
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 16px;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          border: none;
+          color: white;
+          background:rgb(24, 100, 193);
+          border-radius: 25px;
+          width: 20vw;
+          
+          &:hover {
+            background: rgb(0, 106, 255);
+          }
+        }
+    }
   }
 }

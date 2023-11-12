@@ -3,7 +3,6 @@ import "./App.css";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import Blog from "./pages/blog/Blog";
 import Videos from "./pages/videos/Videos";
 import Projects from "./pages/projects/Projects";
 import Blogs from "./pages/blogs/Blogs";
@@ -45,11 +44,6 @@ function App() {
           path: "/blogs",
           element: <Blogs />,
         },
-        {
-          path: "/blogs/:id",
-          element: <Blog />,
-        },
-
         {
           path: "/videos",
           element: <Videos />,

@@ -1,5 +1,6 @@
-import Likes from "../../components/likes/Likes";
+import BlogList from "../../components/blogList/BlogList";
 import ReadMore from "../../components/readMore/ReadMore";
+import { blogData } from "../../data";
 import "./blogs.scss";
 import React from "react";
 
@@ -21,31 +22,19 @@ const Blogs = () => {
         <ReadMore text={introWords} maxLength={321} />
       </div>
       <div className="search">
-        <input type="text" />
+        <input type="text" placeholder="Search blog..." />
       </div>
       <div className="posts">
-        <div className="card">
-          <img src="book.jpg" alt="" />
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
-            cupiditate!
-          </h1>
-          <div className="page-section">
-            <div className="left">
-              <img src="simo.jpg" alt="" />
-              <h2>blueHike</h2>
-              <h3>21h</h3>
-            </div>
-            <div className="right">
-              <div className="icons">
-                <Likes style={{ background: "transparent" }} />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
+        {blogData.map((blog) => (
+          <BlogList
+            key={blog.id}
+            imageUrl={blog.imageUrl}
+            title={blog.title}
+            authorUrl={blog.authorUrl}
+            authorName={blog.authorName}
+            timePublished={blog.timePublished}
+          />
+        ))}
       </div>
     </div>
   );
