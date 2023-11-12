@@ -63,7 +63,25 @@ export const projectData = [
     desc: "the project was develped to improve the lives of these living in full time without salaries",
   },
   {
-    id: 1,
+    id: 2,
+    imageUrl: "simo.jpg",
+    title: "project 1",
+    desc: "the project was develped to improve the lives of these living in full time without salaries",
+  },
+  {
+    id: 3,
+    imageUrl: "simo.jpg",
+    title: "project 1",
+    desc: "the project was develped to improve the lives of these living in full time without salaries",
+  },
+  {
+    id: 4,
+    imageUrl: "simo.jpg",
+    title: "project 1",
+    desc: "the project was develped to improve the lives of these living in full time without salaries",
+  },
+  {
+    id: 5,
     imageUrl: "simo.jpg",
     title: "project 1",
     desc: "the project was develped to improve the lives of these living in full time without salaries",
