@@ -13,7 +13,7 @@ const BlogList = ({
 }) => {
   return (
     <div>
-      <Link to={`/blog/${id}`}>
+      <Link to={`/blogs/${id}`}>
         <div className="card">
           <img src={imageUrl} alt="" />
           <h1>{title}</h1>

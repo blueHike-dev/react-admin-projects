@@ -1,12 +1,20 @@
 import "./blog.scss";
 import React from "react";
-import ReactMarkdown from "react-markdown";
+import { useParams } from "react-router-dom";
+import { blogData } from "../../data";
+import SingleBlog from "../../components/singleBlog/SingleBlog";
 
-const Blog = ({ title, content }) => {
+const Blog = () => {
+  const { blogId } = useParams();
+  // const blogId = "1";
+  const selectedBlog = blogData.find((blog) => blog.id === blogId);
+
+  if (!selectedBlog) {
+    return <div>Blog not found</div>;
+  }
   return (
-    <div className="blog">
-      <h1>{title}</h1>
-      <ReactMarkdown source={content} />
+    <div className="blog-page">
+      <SingleBlog {...selectedBlog} />
     </div>
   );
 };

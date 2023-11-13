@@ -1,12 +1,13 @@
 export const blogData = [
   {
-    id: 1,
+    id: "book",
     imageUrl: "book.jpg",
     title:
       "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
     authorUrl: "simo.jpg",
     authorName: "blueHike",
     timePublished: "2d",
+    content: `sample blog`,
   },
   {
     id: 2,
@@ -16,9 +17,30 @@ export const blogData = [
     authorUrl: "book.jpg",
     authorName: "blueHike",
     timePublished: "2d",
+    content: `sample blog`,
   },
   {
-    id: 2,
+    id: 3,
+    imageUrl: "simo.jpg",
+    title:
+      "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
+    authorUrl: "book.jpg",
+    authorName: "blueHike",
+    timePublished: "2d",
+    content: `sample blog`,
+  },
+  {
+    id: 4,
+    imageUrl: "simo.jpg",
+    title:
+      "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
+    authorUrl: "book.jpg",
+    authorName: "blueHike",
+    timePublished: "2d",
+    content: `sample blog`,
+  },
+  {
+    id: 5,
     imageUrl: "simo.jpg",
     title:
       "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
@@ -27,25 +49,7 @@ export const blogData = [
     timePublished: "2d",
   },
   {
-    id: 2,
-    imageUrl: "simo.jpg",
-    title:
-      "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
-    authorUrl: "book.jpg",
-    authorName: "blueHike",
-    timePublished: "2d",
-  },
-  {
-    id: 2,
-    imageUrl: "simo.jpg",
-    title:
-      "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
-    authorUrl: "book.jpg",
-    authorName: "blueHike",
-    timePublished: "2d",
-  },
-  {
-    id: 2,
+    id: 6,
     imageUrl: "simo.jpg",
     title:
       "those are my favorite quotes from my favourite book by delle Carnigiee, how to win frieds and influence people",
