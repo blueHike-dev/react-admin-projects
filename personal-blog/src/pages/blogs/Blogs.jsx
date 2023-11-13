@@ -28,11 +28,12 @@ const Blogs = () => {
         {blogData.map((blog) => (
           <BlogList
             key={blog.id}
-            imageUrl={blog.imageUrl}
-            title={blog.title}
-            authorUrl={blog.authorUrl}
-            authorName={blog.authorName}
-            timePublished={blog.timePublished}
+            {...blog}
+            // imageUrl={blog.imageUrl}
+            // title={blog.title}
+            // authorUrl={blog.authorUrl}
+            // authorName={blog.authorName}
+            // timePublished={blog.timePublished}
           />
         ))}
       </div>

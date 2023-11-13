@@ -22,7 +22,7 @@ const Newsletter = () => {
             effort to develop more Quality projects.
           </p>
         </div>
-        <div className="projects">
+        <div className="projectSample">
           <h3>hello</h3>
           <div className="samples">
             <img src="computer.jpg" alt="" />

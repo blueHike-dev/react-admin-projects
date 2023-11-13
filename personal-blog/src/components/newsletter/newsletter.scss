@@ -36,6 +36,7 @@
 
     .cards {
       display: flex;
+      align-items: center;
       overflow: hidden;
       padding: 50px;
       gap: 30px;
@@ -59,7 +60,7 @@
       }
 
 
-      .projects {
+      .projectSample {
         flex: 1.5;
         overflow-y: scroll;
         width: 450px;

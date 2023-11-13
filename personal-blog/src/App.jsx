@@ -10,6 +10,7 @@ import About from "./pages/about/About";
 import "./variables.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import Blog from "./pages/blog/Blog";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -43,6 +44,10 @@ function App() {
         {
           path: "/blogs",
           element: <Blogs />,
+        },
+        {
+          path: "/blogs:/id",
+          element: <Blog />,
         },
         {
           path: "/videos",

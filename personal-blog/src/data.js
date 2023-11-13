@@ -61,6 +61,7 @@ export const projectData = [
     imageUrl: "simo.jpg",
     title: "project 1",
     desc: "the project was develped to improve the lives of these living in full time without salaries",
+    link: "https://github.com/simo6lues",
   },
   {
     id: 2,

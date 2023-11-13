@@ -1,0 +1,8 @@
+@import '../../variables.scss';
+
+.blog-page {
+  @include themify($themes) {
+    margin-top: 60px;
+    padding: 20px 20px;
+    background-color: themed('bg');
+    color: themed('textColor');}}
