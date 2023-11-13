@@ -7,10 +7,10 @@ import Videos from "./pages/videos/Videos";
 import Projects from "./pages/projects/Projects";
 import Blogs from "./pages/blogs/Blogs";
 import About from "./pages/about/About";
-import Blog from "./pages/blog/Blog";
 import "./variables.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import BlogPost from "./pages/blog/BlogPost";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -20,7 +20,9 @@ function App() {
       <>
         <div className={`theme-${darkMode ? "dark" : "light"}`}>
           <Navbar />
-          <div>{children}</div>
+          <div>
+            <Outlet />
+          </div>
           <Footer />
         </div>
       </>
@@ -43,13 +45,14 @@ function App() {
         {
           path: "/blogs",
           element: <Blogs />,
-          children: [
-            {
-              path: ":blogId",
-              element: <Blog />,
-            },
-          ],
         },
+        // children: [
+        {
+          path: "/blogs/:blogId",
+          element: <BlogPost />,
+        },
+        // ],
+        // },
         {
           path: "/videos",
           element: <Videos />,

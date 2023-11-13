@@ -18,7 +18,7 @@ const Likes = () => {
         className={`like-button ${isLiked ? "liked" : ""}`}>
         <FontAwesomeIcon
           icon={isLiked ? solidHeart : regularHeart}
-          style={{ color: isLiked ? "red" : "black" }}
+          style={{ color: isLiked ? "red" : "darkGrey" }}
         />
       </button>
     </div>

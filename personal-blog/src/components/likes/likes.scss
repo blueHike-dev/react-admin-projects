@@ -1,6 +1,8 @@
+@import '../../variables.scss';
 .likes {
+  @include themify($themes) {
   button {
-    background: white;
+    background: transparent;
       border: none;
       font-size: 25px;
       outline: none;
@@ -21,4 +23,4 @@
         }
       }
   }
-}
+}}
