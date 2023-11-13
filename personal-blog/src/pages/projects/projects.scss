@@ -14,7 +14,7 @@
 
     .card {
       border-radius: 8px;
-        background: themed('bgSoft');
+        // background: themed('bgSoft');
         max-height: auto;
         max-width: auto;
         padding: 10px;
@@ -23,7 +23,7 @@
         // cursor: pointer;
 
         &:hover {
-          background: themed('border');
+          background: themed('bgSoft');
         }
 
         img {

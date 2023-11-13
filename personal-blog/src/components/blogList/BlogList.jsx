@@ -17,31 +17,23 @@ const BlogList = ({
   authorName,
   timePublished,
 }) => {
-  const handleShare = async () => {
+  const handleShare = () => {
     if (navigator.share) {
-      try {
-        await navigator.share({
-          title: title,
+      navigator
+        .share({
+          title: "Check out this blog post!",
+          text: title,
           url: window.location.href,
-        });
-        alert("Shared Successfuly");
-      } catch (error) {
-        console.error("Error sharing:", error);
-      }
+        })
+        .then(() => console.log("Shared successfully"));
+      alert("Shared Successfuly").catch((error) =>
+        console.error("Error sharing:", error)
+      );
+    } else {
+      alert("Sharing not Supported on this device/browser.");
     }
   };
 
-  const [showOptions, setShowOptions] = useState(false);
-
-  const handleOption = () => {
-    setShowOptions(!showOptions);
-  };
-
-  const handleRandomOption = () => {
-    const options = ["Option 1", "Option 2", "Option 3"];
-    const randomOption = options[Math.floor(Math.random() * options.length)];
-    alert(`Selected option: ${randomOption}`);
-  };
   return (
     <div>
       <div className="card">
