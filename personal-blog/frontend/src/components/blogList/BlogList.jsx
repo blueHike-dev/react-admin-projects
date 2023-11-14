@@ -7,15 +7,13 @@ import {
   faEllipsisVertical,
   faShareAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { formatDistanceToNow } from "date-fns";
 
-const BlogList = ({
-  id,
-  imageUrl,
-  title,
-  authorUrl,
-  authorName,
-  timePublished,
-}) => {
+const BlogList = ({ blogId, img, title, authorUrl, author, createdAt }) => {
+  const relativeTime = formatDistanceToNow(new Date(createdAt), {
+    addSuffix: true,
+  });
+
   const handleShare = () => {
     if (navigator.share) {
       navigator
@@ -36,8 +34,8 @@ const BlogList = ({
   return (
     <div>
       <div className="card">
-        <Link className="link" to={`/blogs/${id}`}>
-          <img src={imageUrl} alt="" />
+        <Link className="link" to={`/blogs/${blogId}`}>
+          <img src={img} alt="" />
           <h1>{title}</h1>
         </Link>
         <div className="page-section">
@@ -45,9 +43,9 @@ const BlogList = ({
             <Link to="/about">
               <img src={authorUrl} alt="" />
             </Link>
-            <span>{authorName}</span>
+            <span>{author}</span>
             <div className="dot"></div>
-            <span>{timePublished}</span>
+            <span>{relativeTime}</span>
           </div>
           <div className="right">
             <Likes />

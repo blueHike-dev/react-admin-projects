@@ -2,7 +2,7 @@ import BlogList from "../../components/blogList/BlogList";
 import ReadMore from "../../components/readMore/ReadMore";
 import { blogData } from "../../data";
 import "./blogs.scss";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Blogs = () => {
   const introWords = `
@@ -16,6 +16,16 @@ const Blogs = () => {
         world a better place and feel like this is the safiest space to
         kickstart my journey. I hope you will enjoy everything that I will be
         sharing.`;
+
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/blogs")
+      .then((response) => response.json())
+      .then((data) => setBlogPosts(data))
+      .catch((error) => console.error("Error fetching blog posts:", error));
+  }, []);
+
   return (
     <div className="blogs-page">
       <div className="introduction">
@@ -25,8 +35,8 @@ const Blogs = () => {
         <input type="text" placeholder="Search blog..." />
       </div>
       <div className="posts">
-        {blogData.map((blog) => (
-          <BlogList key={blog.id} {...blog} />
+        {blogPosts.map((blog) => (
+          <BlogList key={blog._id} {...blog} />
         ))}
       </div>
     </div>
