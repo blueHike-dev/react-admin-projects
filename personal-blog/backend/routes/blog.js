@@ -38,7 +38,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//Get single blog
+//Get a single blog
 router.get("/:id", async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id);
