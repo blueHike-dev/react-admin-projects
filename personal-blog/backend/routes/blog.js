@@ -13,7 +13,7 @@ router.post("/", async (req, res) => {
 });
 
 //Update existing blog
-router.put("/:blogId", async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
     const updatedBlog = await Blog.findByIdAndUpdate(
       req.params.blogId,
@@ -29,7 +29,7 @@ router.put("/:blogId", async (req, res) => {
 });
 
 //Delete a blog
-router.delete("/:blogId", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     const deletedBlog = await Blog.findByIdAndRemove(req.params.blogId);
     res.json(deletedBlog);
@@ -39,9 +39,9 @@ router.delete("/:blogId", async (req, res) => {
 });
 
 //Get single blog
-router.get("/:blogId", async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
-    const blog = await Blog.findOne({ blogId: req.params.blogId });
+    const blog = await Blog.findById(req.params.id);
     res.status(200).json(blog);
   } catch (error) {
     res.status(500).json(error);
@@ -51,10 +51,18 @@ router.get("/:blogId", async (req, res) => {
 //Get all blogs
 router.get("/", async (req, res) => {
   try {
-    const blogs = await Blog.find();
-    res.status(200).json(blogs);
+    const { query } = req.query;
+    if (query) {
+      const blogs = await Blog.find({ $text: { $search: query } });
+      res.status(200).json(blogs);
+      // const blogs = await Blog.find();
+    } else {
+      const blogs = await Blog.find();
+      res.status(200).json(blogs);
+    }
+    // res.status(200).json(blogs);
   } catch (error) {
-    res.status(500).json({ error: "Internal Server Error" });
+    res.status(500).json({ error: "Internal  Error" });
   }
 });
 

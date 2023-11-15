@@ -9,10 +9,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { formatDistanceToNow } from "date-fns";
 
-const BlogList = ({ blogId, img, title, authorUrl, author, createdAt }) => {
-  const relativeTime = formatDistanceToNow(new Date(createdAt), {
-    addSuffix: true,
-  });
+const BlogList = ({ _id, img, title, authorUrl, author, createdAt }) => {
+  const relativeTime = (timestamps) => {
+    return formatDistanceToNow(new Date(timestamps), {
+      addSuffix: false,
+      includeSeconds: false,
+    });
+  };
+  //   addSuffix: true,
+  // });
 
   const handleShare = () => {
     if (navigator.share) {
@@ -34,7 +39,7 @@ const BlogList = ({ blogId, img, title, authorUrl, author, createdAt }) => {
   return (
     <div>
       <div className="card">
-        <Link className="link" to={`/blogs/${blogId}`}>
+        <Link className="link" to={`/blogs/${_id}`}>
           <img src={img} alt="" />
           <h1>{title}</h1>
         </Link>
@@ -45,7 +50,7 @@ const BlogList = ({ blogId, img, title, authorUrl, author, createdAt }) => {
             </Link>
             <span>{author}</span>
             <div className="dot"></div>
-            <span>{relativeTime}</span>
+            <span>{relativeTime(createdAt)}</span>
           </div>
           <div className="right">
             <Likes />

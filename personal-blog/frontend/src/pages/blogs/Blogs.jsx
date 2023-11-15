@@ -1,6 +1,5 @@
 import BlogList from "../../components/blogList/BlogList";
 import ReadMore from "../../components/readMore/ReadMore";
-import { blogData } from "../../data";
 import "./blogs.scss";
 import React, { useEffect, useState } from "react";
 
@@ -18,13 +17,22 @@ const Blogs = () => {
         sharing.`;
 
   const [blogPosts, setBlogPosts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch(
+      `http://localhost:5000/api/blogs${
+        searchTerm ? `?query=${searchTerm}` : ""
+      }`
+    )
       .then((response) => response.json())
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
-  }, []);
+  }, [searchTerm]);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <div className="blogs-page">
@@ -32,12 +40,19 @@ const Blogs = () => {
         <ReadMore text={introWords} maxLength={321} />
       </div>
       <div className="search">
-        <input type="text" placeholder="Search blog..." />
+        <input
+          type="text"
+          placeholder="Search blog..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
       </div>
       <div className="posts">
-        {blogPosts.map((blog) => (
-          <BlogList key={blog._id} {...blog} />
-        ))}
+        {Array.isArray(blogPosts) ? (
+          blogPosts.map((blog) => <BlogList key={blog._id} {...blog} />)
+        ) : (
+          <p>Loading...</p>
+        )}
       </div>
     </div>
   );

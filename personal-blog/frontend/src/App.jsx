@@ -48,7 +48,7 @@ function App() {
         },
         // children: [
         {
-          path: "/blogs/:blogId",
+          path: "/blogs/:id",
           element: <BlogPost />,
         },
         // ],
