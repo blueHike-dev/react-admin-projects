@@ -51,21 +51,21 @@ $themes: (
 
 // Mobile
 @mixin mobile {
-  @media (max-width: 480px) {
+  @media only screen and  (max-width: 600px) {
     @content;
   }
 }
 
-//Extra small devices
-@mixin small-devices {
-  @media (min-width: 768px) and (max-width: 757px) {
+//Tablet
+@mixin tablet {
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
     @content
   }
 }
 
-
-@mixin Extra-large-screen {
-   @media (min-width: 1920px) {
+// desktop
+@mixin desktop {
+   @media only screen and  (min-width: 1025px) {
     @content
    }
 }
