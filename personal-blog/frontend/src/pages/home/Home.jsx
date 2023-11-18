@@ -11,8 +11,8 @@ const Home = () => {
         <Newsletter />
       </div>
       <div className="content">
+        <h1>We do love going Hike</h1>
         <img src="hike.jpg" alt="" />
-        hello
       </div>
     </div>
   );
