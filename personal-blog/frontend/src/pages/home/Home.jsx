@@ -10,8 +10,10 @@ const Home = () => {
       <div className="border">
         <Newsletter />
       </div>
-      <img src="hike.jpg" alt="" style={{ width: "70vw", height: "80vh" }} />
-      hello
+      <div className="content">
+        <img src="hike.jpg" alt="" />
+        hello
+      </div>
     </div>
   );
 };
