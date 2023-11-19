@@ -18,7 +18,7 @@ const Projects = () => {
             />
           ))}
         </div>
-        <div className="border"></div>
+        {/* <div className="border"></div> */}
       </div>
     </>
   );

@@ -2,16 +2,17 @@
 
 .projects {
   @include themify($themes) {
-    margin-top: 40px;
+    margin-top: 60px;
     background-color: themed('bg');
     color: themed('textColor');
 
 .project {
-    padding: 10px 20px;
+    // padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-bottom: 20px;
 
       @include mobile {
           padding:10px 0px;
@@ -101,6 +102,7 @@
 }
 
 .border {
+  margin-top: 20px;
 
   @include mobile {
       border: 1px solid white;
