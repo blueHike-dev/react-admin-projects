@@ -3,9 +3,11 @@
 .projects {
   @include themify($themes) {
     margin-top: 40px;
-    padding: 10px 20px;
     background-color: themed('bg');
     color: themed('textColor');
+
+.project {
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,4 +98,12 @@
     }
   }
   }
+}
+
+.border {
+
+  @include mobile {
+      border: 1px solid white;
+    }
+}
 }
