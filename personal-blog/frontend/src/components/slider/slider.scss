@@ -6,6 +6,11 @@
     display: flex;
     font-family: 'Roboto', sans-serif;
 
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
     .profile-words {
       flex: 1;
       padding: 120px 70px;
@@ -26,6 +31,10 @@
         font-weight: 500;
         font-family: 'Roboto', sans-serif;
         margin-bottom: 10px;
+
+        @include mobile {
+          font-size: 50px;
+        }
       }
 
       .duty {
@@ -40,6 +49,10 @@
         margin-top: 50px;
         margin-left: 70px;
         font-family: 'Roboto', sans-serif;
+
+          @include mobile {
+              margin-left: 10px;
+            }
 
         .previos {
           border: none;
@@ -81,6 +94,14 @@
       align-items: center;
       width: 350px;
       height: 450px;
+
+        @include mobile {
+            width: 250px;
+              height: 350px;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 40px;
+          }
     
       position: relative;
       padding: 50px;
