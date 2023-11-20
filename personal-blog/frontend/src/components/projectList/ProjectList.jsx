@@ -13,9 +13,11 @@ const ProjectList = ({ imageUrl, title, desc, link }) => {
           <div className="desc">
             <ReadMore text={desc} maxLength={40} />
           </div>
-          <a href={link}>
-            <button className="project">View Project</button>
-          </a>
+          <div className="link">
+            <a href={link}>
+              <button className="project">View Project</button>
+            </a>
+          </div>
         </div>
       </div>
     </>

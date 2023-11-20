@@ -32,6 +32,7 @@
         // cursor: pointer;
 
           @include mobile {
+
               flex-direction: column;
               margin-top: 0px;
               gap: 20px;
@@ -46,7 +47,9 @@
 
         .img {
           flex: 1;
-
+  @include mobile {
+      flex: 2;
+    }
 
           img {
           width: 100%;
@@ -67,7 +70,10 @@
           height: 100%;
 
           @include mobile {
-            height: 10px;
+            flex: 0.5;
+            background: red;
+            height: 50%;
+            display: flex;
           }
 
         h2 {
@@ -83,6 +89,10 @@
           font-size: 18px;
           font-family: 'Roboto';
         }
+
+        .link {
+
+        
 
         .project  {
           display: inline-block;
@@ -105,6 +115,7 @@
           &:hover {
             background: rgb(0, 106, 255);
           }
+        }
         }
     }
   }
