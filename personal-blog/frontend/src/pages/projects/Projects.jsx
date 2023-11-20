@@ -7,18 +7,15 @@ const Projects = () => {
   return (
     <>
       <div className="projects">
-        <div className="project">
-          {projectData.map((project) => (
-            <ProjectList
-              key={project.id}
-              imageUrl={project.imageUrl}
-              title={project.title}
-              desc={project.desc}
-              link={project.link}
-            />
-          ))}
-        </div>
-        {/* <div className="border"></div> */}
+        {projectData.map((project) => (
+          <ProjectList
+            key={project.id}
+            imageUrl={project.imageUrl}
+            title={project.title}
+            desc={project.desc}
+            link={project.link}
+          />
+        ))}
       </div>
     </>
   );

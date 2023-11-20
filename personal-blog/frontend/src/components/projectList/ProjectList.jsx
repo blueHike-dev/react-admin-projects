@@ -18,7 +18,6 @@ const ProjectList = ({ imageUrl, title, desc, link }) => {
           </a>
         </div>
       </div>
-      <div className="border"></div>
     </>
   );
 };
