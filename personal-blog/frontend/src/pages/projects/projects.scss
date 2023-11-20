@@ -36,9 +36,10 @@
               flex-direction: column;
               margin-top: 0px;
               gap: 20px;
-              max-height: 300px;
-              width: 100vw;
-              border-bottom:1px solid white;
+              height: 60vh;
+              width: 89vw;
+              border-bottom:1px solid themed('border');
+              border-radius: 0px;
             }
 
         &:hover {
@@ -47,9 +48,7 @@
 
         .img {
           flex: 1;
-  @include mobile {
-      flex: 2;
-    }
+ 
 
           img {
           width: 100%;
@@ -70,9 +69,10 @@
           height: 100%;
 
           @include mobile {
-            flex: 0.5;
-            background: red;
-            height: 50%;
+            border-radius: 10px;
+            height: 30px;
+            padding: 0px 30px;
+            margin-top: -10px;
           }
 
         h2 {
@@ -80,13 +80,18 @@
           font-size: 55px;
 
             @include mobile {
-                font-size: 30px;
+                font-size: 25px;
+                margin-top: 5px;
               }
         }
 
         .desc {
           font-size: 18px;
           font-family: 'Roboto';
+
+            @include mobile {
+                font-size: 16px;
+              }
         }
 
         .link {
@@ -109,6 +114,10 @@
           width: 90%;
           margin-left: 20px;
           margin-top: 150px;
+
+            @include mobile {
+              margin-top: 0px;
+              }
         
           
           &:hover {
@@ -121,12 +130,5 @@
   }
 }
 
-.border {
-  margin-top: 20px;
-  width: 100vw;
 
-  @include mobile {
-      border: 1px solid white;
-      background: red;
-    }
-}
+

@@ -11,7 +11,7 @@ const ProjectList = ({ imageUrl, title, desc, link }) => {
         <div className="words">
           <h2>{title}</h2>
           <div className="desc">
-            <ReadMore text={desc} maxLength={40} />
+            <ReadMore text={desc} maxLength={68} />
           </div>
           <div className="link">
             <a href={link}>
