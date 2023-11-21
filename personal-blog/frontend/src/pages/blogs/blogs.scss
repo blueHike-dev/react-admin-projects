@@ -50,6 +50,10 @@
            margin-right: auto;
            margin-bottom: 30px;
 
+            @include mobile {
+                grid-template-columns: 1fr;
+              }
+
           
     
            .card {
