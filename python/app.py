@@ -19,12 +19,20 @@
 # print(course)
 # course.upper
 
-is_hot = True
+# is_hot = True
 
-if is_hot:
+# if is_hot:
+#   print("it's a hot day")
+#   print("enjoy your day")
+# else:
+#   print("it's a cold day")
+#   print("Wear warm clothes")
+# print("Enjoy your day")
+
+temperature = 30
+
+if temperature > 30:
   print("it's a hot day")
-  print("enjoy your day")
 else:
-  print("it's a cold day")
-  print("Wear warm clothes")
-print("Enjoy your day")
+  print("it's not a hot day")
+
