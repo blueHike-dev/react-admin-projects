@@ -1,5 +1,6 @@
-has_good_credit = True
-has_criminal_record = False
-
-if has_good_credit and not has_criminal_record:
-  print("Eligible for loan")
+numbers = [2, 2, 4, 6, 3, 4, 6, 1]
+uniques = []
+for number in numbers:
+  if number not in uniques:
+    uniques.append(number)
+print(uniques)

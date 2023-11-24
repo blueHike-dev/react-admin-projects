@@ -1,2 +1,3 @@
-numbers = [5, 2 ,1, 7, 4]
-print(50 in numbers)
+coordinates = (1, 2, 3)
+x, y, z = coordinates
+print(x)
