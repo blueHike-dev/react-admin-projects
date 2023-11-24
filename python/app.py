@@ -1,3 +1,6 @@
-coordinates = (1, 2, 3)
-x, y, z = coordinates
-print(x)
+def square(number):
+  return number * number
+
+
+result = square(3)
+print(result)
