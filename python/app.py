@@ -1,6 +1,11 @@
-def square(number):
-  return number * number
+class Person:
+  def __init__(self, name):
+    self.name = name
+
+  
+  def talk(self):
+    print('talk')
 
 
-result = square(3)
-print(result)
+john = Person('John Smith')
+john.talk()
