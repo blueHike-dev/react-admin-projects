@@ -4,7 +4,7 @@ JWT Authentication with CrptoJS
 
 ## Overview
 
-This project is a full-stack application that utilizes JWT-based authentication for secure user access.
+This project is a full-stack application that utilizes JWT-based authentication and Authorization for secure user access.
 
 ### Technologies Used
 
