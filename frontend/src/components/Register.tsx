@@ -1,5 +1,3 @@
-// Register.tsx
-
 import React, { useState } from "react";
 import axios, { AxiosResponse } from "axios";
 
@@ -28,8 +26,6 @@ const Register: React.FC = () => {
   const handleRegistration = async () => {
     const errors: Partial<RegisterFormData> = {};
 
-    // Perform validation similar to the login component
-
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
@@ -43,10 +39,8 @@ const Register: React.FC = () => {
       });
 
       if (response.status === 201) {
-        // Registration successful, handle accordingly (e.g., redirect)
       } else {
         console.error("Registration failed:", response.data.message);
-        // Display an error message or handle accordingly
       }
     } catch (error) {
       console.error("Registration failed:", error);
